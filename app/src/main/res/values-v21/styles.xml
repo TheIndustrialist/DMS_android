@@ -1,9 +1,13 @@
-<resources>>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+    <style name="MyTheme" parent="android:Theme.Material.Light" >
+
+        <item name="android:windowBackground">@color/main_window_BG_color</item>
+
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12pt</item>
+        <item name="android:textColor">@color/main_window_TXT_color</item>/
     </style>
 </resources>

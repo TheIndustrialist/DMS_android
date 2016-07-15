@@ -8,77 +8,87 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.uwm.diabetesapp.MainActivity"
+    tools:context=".BGLActivity"
     android:weightSum="1">
 
+    <!--
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:height="100dp"
+        android:width="160dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:indeterminate="false" />
+        -->
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:progressDrawable="@drawable/progress"
+        android:thumb="@drawable/thumb"
+        android:indeterminate="false">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bgl_string"
+        android:id="@+id/textViewBGL"
+        android:textSize="30dp"
+        android:textAlignment="center">
+    </TextView>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BGL"
-        android:id="@+id/BGLbutton"
+        android:text="Save"
+        android:id="@+id/BGLSave_btn"
         android:height="100dp"
         android:width="160dp"
-        android:layout_alignParentTop="true"
+        android:textSize="30dp"
+        android:layout_below="@+id/seekBar1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="30dp"
         android:textAlignment="center"
-        android:drawableLeft="@drawable/bgl"
         android:textAllCaps="false"
-        android:clickable="false" />
+        android:layout_marginTop="10dp" />
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nutrition"
-        android:id="@+id/Nutritionbutton"
+        android:text="View Stats"
+        android:id="@+id/BGLStats_btn"
         android:height="100dp"
         android:width="160dp"
         android:textSize="30dp"
-        android:layout_below="@+id/BGLbutton"
+        android:layout_below="@+id/BGLSave_btn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_gravity="center_vertical"
         android:textAlignment="center"
-        android:drawableLeft="@drawable/nutrition"
         android:textAllCaps="false"/>
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fitness"
-        android:id="@+id/Fitnessbutton"
+        android:text="Prescription"
+        android:id="@+id/BGLScript_btn"
         android:height="100dp"
         android:width="160dp"
         android:textSize="30dp"
-        android:layout_below="@+id/FitnessSave_btn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:drawableLeft="@drawable/fitness"
-        android:textAllCaps="false"/>
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Medication"
-        android:id="@+id/Medicationbutton"
-        android:height="100dp"
-        android:width="160dp"
-        android:textSize="30dp"
-        android:layout_below="@+id/Fitnessbutton"
+        android:layout_below="@+id/BGLStats_btn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textAlignment="center"
-        android:drawableLeft="@drawable/meds"
+        android:drawableLeft="@drawable/script"
         android:textAllCaps="false"/>
+
+
 
 
 </LinearLayout>

@@ -8,15 +8,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.uwm.diabetesapp.MainActivity"
+    tools:context=".MedicationActivity"
     android:weightSum="1">
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BGL"
-        android:id="@+id/BGLbutton"
+        android:text="Select"
+        android:id="@+id/MedSelect_btn"
         android:height="100dp"
         android:width="160dp"
         android:layout_alignParentTop="true"
@@ -26,58 +26,53 @@
         android:layout_alignParentEnd="true"
         android:textSize="30dp"
         android:textAlignment="center"
-        android:drawableLeft="@drawable/bgl"
-        android:textAllCaps="false"
-        android:clickable="false" />
-
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nutrition"
-        android:id="@+id/Nutritionbutton"
-        android:height="100dp"
-        android:width="160dp"
-        android:textSize="30dp"
-        android:layout_below="@+id/BGLbutton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:drawableLeft="@drawable/nutrition"
         android:textAllCaps="false"/>
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fitness"
-        android:id="@+id/Fitnessbutton"
+        android:text="Save"
+        android:id="@+id/MedSave_btn"
         android:height="100dp"
         android:width="160dp"
         android:textSize="30dp"
-        android:layout_below="@+id/FitnessSave_btn"
+        android:layout_below="@+id/NutritionSelect_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textAllCaps="false" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Stats"
+        android:id="@+id/MedStats_btn"
+        android:height="100dp"
+        android:width="160dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/MedSave_btn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_gravity="center_vertical"
         android:textAlignment="center"
-        android:drawableLeft="@drawable/fitness"
         android:textAllCaps="false"/>
 
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Medication"
-        android:id="@+id/Medicationbutton"
+        android:text="Prescription"
+        android:id="@+id/MedScript_btn"
         android:height="100dp"
         android:width="160dp"
         android:textSize="30dp"
-        android:layout_below="@+id/Fitnessbutton"
+        android:layout_below="@+id/MedStats_btn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textAlignment="center"
-        android:drawableLeft="@drawable/meds"
+        android:drawableLeft="@drawable/script"
         android:textAllCaps="false"/>
 
 
