@@ -15,18 +15,18 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class PrescriptionDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_TABLE = "DiabeticTable";
-    private static DatabaseHelper sInstance;
+    private static final String DATABASE_TABLE = "PrescriptionTable";
+    private static PrescriptionDatabaseHelper sInstance;
 
 
-    public static synchronized DatabaseHelper getInstance(Context context) {
+    public static synchronized PrescriptionDatabaseHelper getInstance(Context context) {
         // Use the application context, which will ensure that you
         // don't accidentally leak an Activity's context.
         // See this article for more information: http://bit.ly/6LRzfx
         if (sInstance == null) {
-            sInstance = new DatabaseHelper(context.getApplicationContext());
+            sInstance = new PrescriptionDatabaseHelper(context.getApplicationContext());
         }
         return sInstance;
     }
@@ -35,8 +35,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * Constructor should be private to prevent direct instantiation.
      * make call to static method "getInstance()" instead.
      */
-    private DatabaseHelper(Context context) {
-        super(context, "diabetes.db", null, 1);
+    private PrescriptionDatabaseHelper(Context context) {
+        super(context, "prescription.db", null, 1);
     }
 
 
@@ -44,12 +44,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + DATABASE_TABLE +
                 "(DateTime TEXT PRIMARY KEY, " +
-                "EventCode INTEGER, " +
+                "PrescriptionType INTEGER, " +
                 "BGL INTEGER, " +
                 "Diet TEXT," +
                 "Exercise TEXT," +
                 "Medication TEXT);");
-     }
+
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -57,25 +58,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean saveEvent (int code, int bgl, String diet, String exercise, String medication) {
-        String formattedDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(Calendar.getInstance().getTime());
+    public boolean savePrescription (int code, int bgl, String diet, String exercise, String medication) {
+        String formattedDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues cv = new ContentValues();
         cv.put("DateTime", formattedDate);
-        cv.put("EventCode", code);
+        cv.put("PrescriptionType", code); //0 to check BGL, 1 to eat something, 2 to fitness, 3 to take meds
         cv.put("BGL", bgl);
         cv.put("Diet", diet);
         cv.put("Exercise", exercise);
         cv.put("Medication", medication);
+        /*
+        TODO figure out this data model.  maybe have a duration like eat an apple every 4 hours or check BGL every hour
+        use the date code as the date/time of the next prescription event and set off alarm???
+        */
 
         long res = db.insert(DATABASE_TABLE, null, cv);
 
         if( res == -1 )
             return false;
         else {
-            Log.v("DB EVENT", formattedDate + "\t" + code + "\t" +bgl + "\t" + diet + "\t" + exercise + "\t" + medication);
+             Log.v("DB EVENT", formattedDate + "\t" + code + "\t" +bgl + "\t" + diet + "\t" + exercise + "\t" + medication);
             return true;
         }
 
@@ -96,8 +101,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public ArrayList<DiabeticEntry> getAllItems() {
-        ArrayList<DiabeticEntry> dbList = new ArrayList<DiabeticEntry>();
+    public ArrayList<PrescriptionEntry> getAllItems() {
+        ArrayList<PrescriptionEntry> dbList = new ArrayList<PrescriptionEntry>();
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from " + DATABASE_TABLE, null);
@@ -105,7 +110,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //COLLECT EACH ROW IN THE TABLE
         if (cursor.moveToFirst()){
             do {
-                DiabeticEntry entry = new DiabeticEntry();
+                PrescriptionEntry entry = new PrescriptionEntry();
                 entry.setTime(cursor.getString(0));
                 entry.setCode(cursor.getInt(1));
                 entry.setBGL(cursor.getInt(2));

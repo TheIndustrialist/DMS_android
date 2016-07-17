@@ -11,7 +11,7 @@
     tools:context=".NutritionActivity"
     android:weightSum="1">
 
-
+<!--
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,7 +27,72 @@
         android:textSize="30dp"
         android:textAlignment="center"
         android:textAllCaps="false"/>
+-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="0dp"
+        android:weightSum="1">
 
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/NutritionQty_txt"
+            android:background="@android:color/background_light"
+            android:layout_gravity="right"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:hint="Qty"
+            android:textColorHint="@color/abc_secondary_text_material_light"
+            android:imeOptions="actionDone"
+            android:lines="1">
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/NutritionFood_txt"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/background_light"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:hint="Food"
+            android:selectAllOnFocus="true"
+            android:inputType="text"
+            android:lines="1"
+            android:textColorHint="@color/abc_secondary_text_material_light"
+            android:imeOptions="actionDone">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="0dp">
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:id="@+id/foodInServings_lbl"
+            android:layout_below="@+id/NutritionQty_txt"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="in servings"
+            android:textAlignment="viewStart"
+            android:layout_gravity="start" />
+    </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
@@ -47,7 +112,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Stats"
+        android:text="Nutrition Stats"
         android:id="@+id/NutritionStats_btn"
         android:height="100dp"
         android:width="160dp"
@@ -58,6 +123,7 @@
         android:layout_gravity="center_vertical"
         android:textAlignment="center"
         android:textAllCaps="false"/>
+    <!--android:drawableLeft="@drawable/nutritionstats"-->
 
 
     <Button

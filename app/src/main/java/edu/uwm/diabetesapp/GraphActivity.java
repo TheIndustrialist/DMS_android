@@ -2,23 +2,29 @@ package edu.uwm.diabetesapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class BGLStatsActivity extends Activity {
+import java.util.ArrayList;
+
+public class GraphActivity extends Activity {
+
+    DatabaseHelper diabeticdb;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bgl); //change this once db is created
+        setContentView(R.layout.graphstats);
 
-    //TODO this activity reserved for launching BGL stats
+        diabeticdb = DatabaseHelper.getInstance(this); //retrun reference to master db
+
+        //TODO create the main stats and graphs view
 
     }
-
-
 }

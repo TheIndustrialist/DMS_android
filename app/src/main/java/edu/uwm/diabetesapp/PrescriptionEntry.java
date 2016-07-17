@@ -3,7 +3,7 @@ package edu.uwm.diabetesapp;
 /**
  * Created by Lenovo on 7/14/2016.
  */
-public class DiabeticEntry {
+public class PrescriptionEntry {
 
     //MEMBER ATTRIBUTES
     private String timestamp;
@@ -13,9 +13,9 @@ public class DiabeticEntry {
     private String exercise;
     private String medication;
 
-    public DiabeticEntry(){}
+    public PrescriptionEntry(){}
 
-    public DiabeticEntry(String time, int id, int bgl, String nutrition, String fitness, String meds){
+    public PrescriptionEntry(String time, int id, int bgl, String nutrition, String fitness, String meds){
         timestamp = time;
         code = id;
         BGL = bgl;

@@ -60,7 +60,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Stats"
+        android:text="BGL Stats"
         android:id="@+id/BGLStats_btn"
         android:height="100dp"
         android:width="160dp"
@@ -71,6 +71,7 @@
         android:layout_gravity="center_vertical"
         android:textAlignment="center"
         android:textAllCaps="false"/>
+    <!--android:drawableLeft="@drawable/bglstats"-->
 
 
     <Button

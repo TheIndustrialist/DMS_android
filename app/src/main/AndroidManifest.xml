@@ -96,5 +96,12 @@
             android:label="@string/medication_name">
         </activity>
 
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".GraphActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/graphs_name">
+        </activity>
+
     </application>
 </manifest>

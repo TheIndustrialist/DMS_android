@@ -90,7 +90,7 @@ public class BGLActivity extends Activity {
     }
 
     private void saveBGL(){
-        boolean saved = diabeticdb.saveEvent(0,bglLevel.getBGL(),"","","");
+        boolean saved = diabeticdb.saveEvent(0,bglLevel.getBGL(),null,null,null);
           //int code, int bgl, String diet, String exercise, String medication
         if( saved == true )
             Toast.makeText(BGLActivity.this, "BGL Saved", Toast.LENGTH_LONG).show();
@@ -113,7 +113,6 @@ public class BGLActivity extends Activity {
                     "\t" + entry.getExercise() +
                     "\t" + entry.getMedication();
         }
-
         Log.v("DATABASE RECORDS", dbList);
     }
 

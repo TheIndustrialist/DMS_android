@@ -4,5 +4,6 @@
     <string name="fitness_name">Fitness</string>
     <string name="medication_name">Medication</string>
     <string name="nutrition_name">Nutrition</string>
+    <string name="graph_name">Graphs</string>
     <string name="bgl_string">BGL: 40mg/dl</string>
 </resources>

@@ -80,5 +80,18 @@
         android:drawableLeft="@drawable/meds"
         android:textAllCaps="false"/>
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Graph Stats"
+        android:id="@+id/Graphbutton"
+        android:height="100dp"
+        android:width="160dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/Medicationbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textAllCaps="false"/>
+        <!--android:drawableLeft="@drawable/graph"-->
 </LinearLayout>
