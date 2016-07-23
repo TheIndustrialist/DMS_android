@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BGLActivity"
+    android:weightSum="1">
+
+    <SeekBar
+        android:id="@+id/BGLseekBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:progressDrawable="@drawable/progress"
+        android:thumb="@drawable/thumb"
+        android:indeterminate="false">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bgl_string"
+        android:id="@+id/textViewBGL"
+        android:textSize="30dp"
+        android:textAlignment="center">
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/BGLTime_txt"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:inputType="datetime"
+        android:lines="1"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+    </EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/BGLSave_btn"
+        android:height="100dp"
+        android:width="160dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/BGLTime_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BGL Stats"
+        android:id="@+id/BGLStats_btn"
+        android:height="100dp"
+        android:width="160dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/BGLSave_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        android:textAllCaps="false"/>
+    <!--android:drawableLeft="@drawable/bglstats"-->
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prescription"
+        android:id="@+id/BGLScript_btn"
+        android:height="100dp"
+        android:width="160dp"
+        android:textSize="30dp"
+        android:layout_below="@+id/BGLStats_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:drawableLeft="@drawable/script"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
