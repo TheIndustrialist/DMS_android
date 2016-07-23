@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.uwm.diabetesapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".BGLActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/bgl_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".NutritionActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/nutrition_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".FitnessActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/fitness_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".MedicationActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/medication_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".BGLStatsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/bgl_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".NutritionStatsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/nutrition_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".FitnessStatsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/fitness_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".MedicationStatsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/medication_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".BGLScriptActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/bgl_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".NutritionScriptActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/nutrition_name">
+        </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".MedicationScriptActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/medication_name">
+        </activity>
+
+        <activity
+            android:label="@string/stats_name"
+            android:theme="@style/AppTheme"
+            android:name=".StatsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+    </application>
+</manifest>
