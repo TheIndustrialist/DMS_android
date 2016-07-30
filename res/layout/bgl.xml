@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BGLActivity"
+    android:weightSum="1">
+
+    <SeekBar
+        android:id="@+id/BGLseekBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:progressDrawable="@drawable/progress"
+        android:thumb="@drawable/thumb"
+        android:indeterminate="false">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bgl_string"
+        android:id="@+id/textViewBGL"
+        android:textSize="30dp"
+        android:textAlignment="center">
+    </TextView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="5dp"
+        android:paddingTop="0dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:text="Select Date"
+            android:onClick="showDatePickerDialog"
+            android:id="@+id/date_btn"
+            android:textSize="20sp"
+            android:minWidth="125dp" />
+
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Select Time"
+            android:onClick="showTimePickerDialog"
+            android:id="@+id/time_btn"
+            android:textSize="20sp"
+            android:minWidth="125dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/BGLSave_btn"
+        android:height="60dp"
+        android:width="160dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/BGLTime_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/save"
+        android:layout_marginTop="0dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BGL Stats"
+        android:id="@+id/BGLStats_btn"
+        android:height="60dp"
+        android:width="160dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/BGLSave_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        android:drawableLeft="@drawable/viewlog"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/BGLScript_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prescription"
+        android:height="60dp"
+        android:width="160dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/BGLStats_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:drawableLeft="@drawable/script"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
